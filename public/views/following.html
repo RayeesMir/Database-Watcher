@@ -1,0 +1,27 @@
+<h4>Following</h4>
+
+<div ng-repeat="collection in collections">
+    <div ng-hide="collection.name === 'system.profile'" class="row"
+         style="padding: 10px; border: 1px solid #EAE3E3;">
+        <div class="col-md-8">
+
+            <h4 style="color: grey; display: inline-block;">
+                {{ collection.name }}
+            </h4>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <button ng-hide="collection.isFollowing" class="btn btn-primary"
+                    ng-click="subscribe(collection.name)">Follow
+            </button>
+
+            <button ng-hide="!collection.isFollowing" class="btn btn-success"
+                    ng-click="unSubscribe(collection.name)">Following
+            </button>
+
+        </div>
+
+    </div>
+</div>

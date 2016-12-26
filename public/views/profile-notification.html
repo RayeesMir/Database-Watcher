@@ -1,0 +1,57 @@
+<!--<h4>Posts/Notification</h4>-->
+<!--<div ng-repeat="message in messages" style="padding-bottom: 10px; border-bottom: 1px dotted grey;">-->
+    <!--<p>-->
+        <!--The {{ message.collection }} has been effected by-->
+        <!--{{ message.operation }} performed from-->
+        <!--{{ message.client }} at {{ message.time }}-->
+        <!--{{ message.user }} by {{ message.user }}-->
+    <!--</p>-->
+    <!--<p>Collection Effected:-->
+        <!--<small>{{ message.collection }}</small>-->
+    <!--</p>-->
+    <!--<h5>Operation:-->
+        <!--<small>{{ message.operation }}</small>-->
+    <!--</h5>-->
+    <!--<h5>Data Effected:-->
+        <!--<small>{{ message.dataEffected }}</small>-->
+    <!--</h5>-->
+    <!--<h5>Client:-->
+        <!--<small>{{ message.client }}</small>-->
+    <!--</h5>-->
+    <!--<h5>User:-->
+        <!--<small>{{ message.user }}</small>-->
+    <!--</h5>-->
+    <!--<h5>Time:-->
+        <!--<small>{{ message.time | date:'medium' }}</small>-->
+    <!--</h5>-->
+<!--</div>-->
+
+
+<h4>Posts/Notification</h4>
+<div class="notify-wrap">
+    <div ng-repeat="message in messages" class="notifications">
+        <p class="notify-message">
+            <span class="gyphicon glyphicon-envelope"></span>
+            <span data-ng-bind="message.collection"></span></p>
+
+        <p class="notify-message">
+            <span class="glyphicon glyphicon-pencil"></span>
+            <span data-ng-bind="message.operation"></span></p>
+
+        <p class="notify-message">
+            <span class="gyphicon glyphicon-envelope"></span>
+            <span data-ng-bind="message.dataEffected"></span></p>
+
+        <p class="notify-message">
+            <span class="glyphicon glyphicon-user"></span>
+            <span data-ng-bind="message.client"></span></p>
+
+        <p class="notify-time">
+            <span class="glyphicon glyphicon-user"></span> <span data-ng-bind="message.name"></span>
+            <span class="pull-right">
+				<span class="glyphicon glyphicon-time"></span>
+				<span data-ng-bind="message.time | date:'medium'"></span>
+			</span>
+        </p>
+    </div>
+</div>
