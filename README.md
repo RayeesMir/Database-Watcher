@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* Database Watcher watcher any changes made to your database collections and sends notification to the subscribers of the collections.
+* Database Watcher watches any changes made to your database collections and sends notification to the subscribers of the collections.
 * Version 1.0
 
 ### How do I get set up? ###
